@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style2.css') }}">
+	<link rel="shortcut icon" href="static/icon.png">
+	<link rel="icon" type="image/png" href="static/icon.png" sizes="192x192">
+	<link rel="apple-touch-icon" sizes="180x180" href="static/icon.png">
+	<script type="text/javascript">
+   
+   
+    
+	$(document).ready(function() {
+    $(".btn").click(function(){
+		$("#myModal").modal('show');
+        
+    }); 
+});
+  </script>
+	</head>
+	<body>
+	<header class="header-area header-sticky">
+	<nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="{{ url_for('index')}}"style="color:#FFE900"><img src="static/logo2.png" ></a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('index')}}" style="color:#FFE900">Home</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="{{ url_for('home')}}" style="color:#FFE900">Recommendations</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('aboutus')}}" style="color:#FFE900">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('contact')}}" style="color:#FFE900">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	</header>
+	<section class="ftco-section">
+		<div class="container" >
+						<div class="row justify-content-center">
+				<div class="col-lg-10 col-md-12">
+					<div class="wrapper">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
+								<div class="contact-wrap">
+									<h3 class="mb-4 text-center" >Send us your queries and feedbacks</h3>
+									<div id="form-message-warning" class="mb-4 w-100 text-center"></div> 
+				      		<div id="form-message-success" class="mb-4 w-100 text-center">
+				            Your message was sent, thank you!
+				      		</div>
+									<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+												</div>
+											</div>
+											<div class="col-md-12"> 
+												<div class="form-group">
+													<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<textarea name="message" class="form-control" id="message" cols="30" rows="8" placeholder="Message"></textarea>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="Send Message" class="btn btn-primary">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #FFE900;color: black;">
+          <h5 class="modal-title" id="exampleModalLabel3">Successfully sent!!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="color: black">&times;</span>
+          </button>
+        </div>
+        
+        <div class="modal-footer" style="text-align: center;">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="{{url_for('static', filename='jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='popper.js')}}"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='bootstrap.min.js')}}"></script>
+
+
+  <div class="footer">
+  		<a href="#"><img src="https://image.flaticon.com/icons/png/512/25/25231.png" height="20px" width="20px"></a>
+	</div>
+
+	</body>
+</html>
+

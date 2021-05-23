@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>About us</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+	<link rel="shortcut icon" href="static/icon.png">
+	<link rel="icon" type="image/png" href="static/icon.png" sizes="192x192">
+	<link rel="apple-touch-icon" sizes="180x180" href="static/icon.png">
+</head>
+<body style="background-color:#090909;">
+	<style type="text/css">
+		body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  padding: 0 0px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: white;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+	</style>
+	
+	<header class="header-area header-sticky">
+	<nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="{{ url_for('index')}}"style="color:#FFE900"><img src="static/logo2.png" ></a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('index')}}" style="color:#FFE900">Home</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="{{ url_for('home')}}" style="color:#FFE900">Recommendations</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('aboutus')}}" style="color:#FFE900">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('contact')}}" style="color:#FFE900">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	</header>
+	<div class="about-section">
+	<br><br>	
+  	<h2>About Us</h2>
+	</div>
+	<div class="container" style="color: grey">
+ 	<p>We are a team of students pursuing MSc in Big Data Analytics from St Xavier's College, Mumbai. This project was a part of our internal assigment under the subject CLOUD COMPUTING. Belonging to <strong>Gen Z</strong> we are hooked to watching movies on ott platforms in our leisure time. The question <strong>which movie to watch next??</strong> keeps on arising time and again. Pertaining to this concern we came up with this project. </p>
+  <h2 style="text-align:center; color: yellow">Our Team</h2>
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body text-center">
+        <img src="static/khushdeep.jpg" alt="Jane" style="width:100%">
+      	<div class="container">
+        <br><h3>Khushdeep Nagi</h3>
+        <p class="title">CEO & Founder</p>
+        <p>khushdeep@xaviers.edu.in</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body text-center">
+		<img src="static/rohan.jpg" alt="Mike" style="width:100%">
+      	<div class="container">
+        <br><h3>Rohan Patil</h3>
+        <p class="title">Art Director</p>
+        <p>rohan.patil@xaviers.edu.in</p>
+        <p><button class="button">Contact</button></p>
+      </div></div>
+    </div>
+    <div class="card">
+      <div class="card-body text-center">
+        <img src="static/shubhashree.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <br><h3>Shubhashree Sur</h3>
+        <p class="title">Designer</p>
+        <p>shubhashree@xaviers.edu.in</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body text-center">
+        <img src="static/surbhi.jpg" alt="Jill" style="width:100%">
+      	<div class="container">
+        <br><h3>Surbhi Thakur</h3>
+        <p class="title">Designer</p>
+        <p>surbhi.thakur@xaviers.edu.in</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+      </div>
+    </div>  
+  </div>
+</div>
+
+
+</div>
+	<div class="footer">
+  		<a href="https://github.com/Rohanvp07/Movie-recommendation-system"><img src="https://image.flaticon.com/icons/png/512/25/25231.png" height="20px" width="20px"></a>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+	</script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+	</script> 
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+	</script>
+</body>
+</html>

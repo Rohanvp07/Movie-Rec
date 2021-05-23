@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Movie Scape</title>
+  <title>Recommendations</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -12,6 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Faustina&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="static/icon.png">
+	<link rel="icon" type="image/png" href="static/icon.png" sizes="192x192">
+	<link rel="apple-touch-icon" sizes="180x180" href="static/icon.png">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -50,10 +53,10 @@
 						<a class="nav-link" href="{{ url_for('home')}}" style="color:#FFE900">Recommendations</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#" style="color:#FFE900">About</a>
+						<a class="nav-link" href="{{ url_for('aboutus')}}" style="color:#FFE900">About</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#" style="color:#FFE900">Contact</a>
+						<a class="nav-link" href="{{ url_for('contact')}}" style="color:#FFE900">Contact</a>
 					</li>
 				</ul>
 			</div>
