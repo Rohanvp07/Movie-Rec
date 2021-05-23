@@ -49,7 +49,7 @@ def home():
 def aboutus():
     return render_template('aboutus.html')
 
-@app.route("/contact",methods=['GET', 'POST'])
+@app.route("/contact")
 def contact():
     return render_template('contact.html')
 
