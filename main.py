@@ -45,6 +45,14 @@ def home():
     suggestions = get_suggestions()
     return render_template('home.html',suggestions=suggestions)
 
+@app.route("/aboutus")
+def aboutus():
+    return render_template('aboutus.html')
+
+@app.route("/contact",methods=['GET', 'POST'])
+def contact():
+    return render_template('contact.html')
+
 
 @app.route("/recommend",methods=["POST"])
 def recommend():
